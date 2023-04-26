@@ -2,12 +2,14 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        String name = "Szymon";
-        System.out.println(name);
 
-        for(int i=1; i<=10; i++){
-            System.out.println(i);
-        }
+        Human human1 = new Human("Rick", 60, 75.5);
+        Human human2 = new Human("Morty", 15, 55.5);
+
+        human1.eat();
+        human2.drink();
+
+        human1.drink();
+        human2.eat();
     }
 }
