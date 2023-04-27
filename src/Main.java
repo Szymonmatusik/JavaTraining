@@ -31,7 +31,7 @@ public class Main {
 
         System.out.println();
 
-        Car car = new Car("Ford", "Mustang", "red", 2022);
+        //Car car = new Car("Ford", "Mustang", "red", 2022,);
 
         //Creating the array of objects of type Food
         Food[] refrigerator = new Food[3];
@@ -56,5 +56,18 @@ public class Main {
         for(Food foodName : refrigerator){
             System.out.println(foodName.name);
         }
+
+        //Testing the objects as parameters
+        Garage garageWest = new Garage("west", 3, 50);
+        Garage garageNorth = new Garage("north", 6, 24);
+        Garage garageSouth = new Garage("south", 1, 78);
+
+        Car mercedes = new Car("Mercedes", "CLA200", "black", 2023, garageWest);
+        Car KIA = new Car("KIA", "Ceed", "red", 2009, garageNorth);
+        Car ford = new Car("Ford", "Focus", "silver", 2004, garageSouth);
+
+        mercedes.parkCar();
+        KIA.parkCar();
+        ford.parkCar();
     }
 }
