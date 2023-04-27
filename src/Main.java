@@ -26,5 +26,8 @@ public class Main {
         Pizza pizza2 = new Pizza("standard bread", "tomato sauce" , "pepper");
         Pizza pizza3 = new Pizza("oak bread", "creamy sauce" );
 
+        System.out.println();
+
+        Car car = new Car("Ford", "Mustang", "red", 2022);
     }
 }
