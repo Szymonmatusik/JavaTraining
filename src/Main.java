@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -29,5 +32,29 @@ public class Main {
         System.out.println();
 
         Car car = new Car("Ford", "Mustang", "red", 2022);
+
+        //Creating the array of objects of type Food
+        Food[] refrigerator = new Food[3];
+
+        Food meat = new Food("meat");
+        Food apple = new Food("apple");
+        Food milk = new Food("milk");
+
+        refrigerator[0] = meat;
+        refrigerator[1] = apple;
+        refrigerator[2] = milk;
+
+        ArrayList<Food> ingredients = new ArrayList<>();
+
+        ingredients.add(meat);
+        ingredients.add(milk);
+        ingredients.add(apple);
+
+        for(Food foodName : ingredients){
+            System.out.println(foodName.name);
+        }
+        for(Food foodName : refrigerator){
+            System.out.println(foodName.name);
+        }
     }
 }

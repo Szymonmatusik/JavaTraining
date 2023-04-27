@@ -1,6 +1,6 @@
 import java.util.Locale;
 
-//This class is made to train toString method() and overriding methods
+//This class is made to train toString() method and overriding methods
 public class Car {
 
     String make, model, color;
