@@ -12,10 +12,19 @@ public class Main {
         human1.drink();
         human2.eat();
 
+        System.out.println();
+
         DiceRoller diceRoller = new DiceRoller();
 
         for(int i=1; i<=10; i++){
             diceRoller.roll();
         }
+
+        System.out.println();
+
+        Pizza pizza1 = new Pizza("crusty bread", "tomato sauce", "mozzarella", "salami");
+        Pizza pizza2 = new Pizza("standard bread", "tomato sauce" , "pepper");
+        Pizza pizza3 = new Pizza("oak bread", "creamy sauce" );
+
     }
 }
