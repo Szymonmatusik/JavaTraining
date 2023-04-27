@@ -11,5 +11,11 @@ public class Main {
 
         human1.drink();
         human2.eat();
+
+        DiceRoller diceRoller = new DiceRoller();
+
+        for(int i=1; i<=10; i++){
+            diceRoller.roll();
+        }
     }
 }
