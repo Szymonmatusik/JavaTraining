@@ -1,3 +1,4 @@
+//This class is made to exercise classes and constructors in java
 public class Human {
 
     String name;

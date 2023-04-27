@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+//This class is made to learn how to pass objects as parameters
 import java.util.List;
 
 public class Garage {
-    boolean isGarageCorrect = false;
+    boolean isGarageCorrect;
     int floor, place;
-    final int MAXIMUM_PLACE = 99, MINIMUM_PLACE = 0, MAXIMUM_FLOOR = 6, MINIMUM_FLOOR = 0;
+    final int MINIMUM_PLACE = 0, MAXIMUM_PLACE = 99, MINIMUM_FLOOR = 0, MAXIMUM_FLOOR = 6;
     String side;
     public static final List<String> sideList = List.of("south", "west", "east", "north");
 

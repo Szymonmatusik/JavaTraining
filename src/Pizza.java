@@ -3,22 +3,19 @@ import java.util.ArrayList;
 //This class is created to test overloaded constructors
 public class Pizza {
 
-    String bread;
-    String sauce;
-    String cheese;
-    String topping;
+    String bread, topping, sauce, cheese;
+    ArrayList<String> ingredientsList = new ArrayList<>();
 
     Pizza(String bread, String sauce){
         this.bread = bread;
         this.sauce = sauce;
 
-        ArrayList<String> ingredientsList = new ArrayList<>();
         ingredientsList.add(this.bread);
         ingredientsList.add(this.sauce);
 
         System.out.println("This is the cheapest pizza.");
 
-        listIngredients(ingredientsList);
+        listIngredients();
     }
 
     Pizza(String bread, String sauce, String topping){
@@ -26,14 +23,13 @@ public class Pizza {
         this.sauce = sauce;
         this.topping = topping;
 
-        ArrayList<String> ingredientsList = new ArrayList<>();
         ingredientsList.add(this.bread);
         ingredientsList.add(this.sauce);
         ingredientsList.add(this.topping);
 
         System.out.println("This is pizza without cheese.");
 
-        listIngredients(ingredientsList);
+        listIngredients();
     }
 
     Pizza(String bread, String sauce, String cheese, String topping){
@@ -42,7 +38,6 @@ public class Pizza {
         this.cheese = cheese;
         this.topping = topping;
 
-        ArrayList<String> ingredientsList = new ArrayList<>();
         ingredientsList.add(this.bread);
         ingredientsList.add(this.sauce);
         ingredientsList.add(this.cheese);
@@ -50,14 +45,14 @@ public class Pizza {
 
         System.out.println("This is a full option pizza.");
 
-        listIngredients(ingredientsList);
+        listIngredients();
     }
 
-    void listIngredients(ArrayList<String> ingredients){
+    void listIngredients(){
         System.out.println("This are the ingredients of your pizza: ");
 
-        for(int i=1; i<=ingredients.size(); i++){
-            System.out.println(i + ". " + ingredients.get(i-1));
+        for(int i=1; i<=this.ingredientsList.size(); i++){
+            System.out.println(i + ". " + this.ingredientsList.get(i-1));
         }
     }
 }
