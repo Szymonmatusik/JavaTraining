@@ -114,6 +114,8 @@ public class Main {
         //Abstract classes are classes which cannot be instantiated but can have a subclass
         //Abstract methods are declared without implementation
 
+        //Access modifiers - reduce the possibilities of developer to use certain fragments of code
+
 
     }
 }
