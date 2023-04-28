@@ -82,5 +82,34 @@ public class Main {
 
         Friend.displayFriends();
 
+        //Inheritance training
+        //Using actually existing instances of Car class (line 62..64)
+        mercedes.go();
+        mercedes.stop();
+
+        Bicycle bicycleBlue = new Bicycle("male", "blue", 21);
+        Bicycle bicycleRed = new Bicycle("female", "red", 19);
+
+        bicycleRed.go();
+        bicycleBlue.go();
+        bicycleRed.stop();
+        bicycleBlue.stop();
+
+        //Training on overriding methods
+        //Overridden method speak()
+        Dog dog = new Dog();
+        dog.speak();
+
+        //Overrode method speak()
+        Animal animal = new Animal();
+        animal.speak();
+
+        //Super keyword exercise
+        Hero hero1 = new Hero("Batman", 42, "Seeing in darkness");
+        Hero hero2 = new Hero("Superman", 35, "Flying");
+        Hero hero3 = new Hero("Captain America", 30, "Shield");
+
+        Person Szymon = new Person("Szymon", 23);
+
     }
 }

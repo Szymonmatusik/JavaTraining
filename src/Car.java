@@ -1,7 +1,7 @@
 import java.util.Locale;
 
 //This class is made to train toString() method and overriding methods
-public class Car {
+public class Car extends Vehicle {
 
     String make, model, color;
     int year;
@@ -14,6 +14,8 @@ public class Car {
         this.color = color;
         this.year = year;
         this.garage = garage;
+
+        super.vehicle = "car";
     }
 
     public void parkCar(){
