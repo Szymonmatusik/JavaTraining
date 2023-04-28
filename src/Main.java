@@ -66,5 +66,21 @@ public class Main {
         mercedes.parkCar();
         KIA.parkCar();
         ford.parkCar();
+
+        //Testing the static keyword
+        Friend Alex = new Friend("Alex", 12);
+        Friend Tom = new Friend("Tom", 16);
+        Friend Elle = new Friend("Elle", 22);
+        Friend Jessica = new Friend("Jessica", 17);
+
+        System.out.println((Friend.numberOfFriends));
+
+        System.out.println("Nick proposal: " + Friend.createNick(Alex));
+        System.out.println("Nick proposal: " + Friend.createNick(Tom));
+        System.out.println("Nick proposal: " + Friend.createNick(Elle));
+        System.out.println("Nick proposal: " + Friend.createNick(Jessica));
+
+        Friend.displayFriends();
+
     }
 }

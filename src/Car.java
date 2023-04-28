@@ -18,7 +18,7 @@ public class Car {
 
     public void parkCar(){
         if (this.garage.isGarageCorrect){
-            System.out.println(toString());
+            System.out.println(this);
         }
         else {
             System.out.println("Car cannot park in this garage");
