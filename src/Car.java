@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Locale;
 
 //This class is made to train toString() method and overriding methods
@@ -32,5 +33,15 @@ public class Car extends Vehicle {
         return "My car is: " + make + " " + model + ". It's color is " + color + " and year is: " + year +
                 ". It's parked in the garage on the " + garage.side + " side, on the floor number " + garage.floor +
                 " and in the place number " + garage.place + ".";
+    }
+
+    @Override
+    void go(){
+        System.out.println("The driver is driving the car.");
+    }
+
+    @Override
+    void stop(){
+        System.out.println("The driving is stopping a car.");
     }
 }

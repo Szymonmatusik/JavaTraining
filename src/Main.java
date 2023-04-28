@@ -111,5 +111,9 @@ public class Main {
 
         Person Szymon = new Person("Szymon", 23);
 
+        //Abstract classes are classes which cannot be instantiated but can have a subclass
+        //Abstract methods are declared without implementation
+
+
     }
 }
