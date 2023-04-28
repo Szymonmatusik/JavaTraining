@@ -9,7 +9,17 @@ public class Bicycle extends Vehicle{
         this.model = model;
         this.size = size;
 
-        super.vehicle = "bicycle";
+        super.vehicleType = "bicycle";
 
+    }
+
+    @Override
+    void go() {
+        System.out.println("The cyclist is riding.");
+    }
+
+    @Override
+    void stop() {
+        System.out.println("The cyclist is stopping.");
     }
 }

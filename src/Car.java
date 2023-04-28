@@ -16,7 +16,7 @@ public class Car extends Vehicle {
         this.year = year;
         this.garage = garage;
 
-        super.vehicle = "car";
+        super.vehicleType = "car";
     }
 
     public void parkCar(){
