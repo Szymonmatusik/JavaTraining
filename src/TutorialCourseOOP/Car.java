@@ -1,5 +1,4 @@
-import java.sql.SQLOutput;
-import java.util.Locale;
+package TutorialCourseOOP;
 
 //This class is made to train toString() method and overriding methods
 public class Car extends Vehicle {
@@ -9,7 +8,7 @@ public class Car extends Vehicle {
 
     Garage garage;
 
-    Car(String make, String model, String color, int year, Garage garage){
+    public Car(String make, String model, String color, int year, Garage garage){
         this.make = make;
         this.model = model;
         this.color = color;
@@ -24,7 +23,7 @@ public class Car extends Vehicle {
             System.out.println(this);
         }
         else {
-            System.out.println("Car cannot park in this garage");
+            System.out.println("TutorialCourseOOP.Car cannot park in this garage");
         }
     }
 
@@ -36,12 +35,12 @@ public class Car extends Vehicle {
     }
 
     @Override
-    void go(){
+    public void go(){
         System.out.println("The driver is driving the car.");
     }
 
     @Override
-    void stop(){
+    public void stop(){
         System.out.println("The driving is stopping a car.");
     }
 }

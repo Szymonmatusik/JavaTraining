@@ -1,8 +1,10 @@
-public class Hero extends Person{
+package TutorialCourseOOP;
+
+public class Hero extends Person {
 
     String power;
 
-    Hero(String name, int age, String power){
+    public Hero(String name, int age, String power){
         super(name, age);
         this.power = power;
 

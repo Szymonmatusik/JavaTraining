@@ -1,3 +1,7 @@
+import TutorialCourseBasics.DiceRoller;
+import TutorialCourseBasics.Pizza;
+import TutorialCourseOOP.*;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -28,9 +32,9 @@ public class Main {
 
         System.out.println();
 
-        //Car car = new Car("Ford", "Mustang", "red", 2022,);
+        //TutorialCourseOOP.Car car = new TutorialCourseOOP.Car("Ford", "Mustang", "red", 2022,);
 
-        //Creating the array of objects of type Food
+        //Creating the array of objects of type TutorialCourseOOP.Food
         Food[] refrigerator = new Food[3];
 
         Food meat = new Food("meat");
@@ -83,7 +87,7 @@ public class Main {
         Friend.displayFriends();
 
         //Inheritance training
-        //Using actually existing instances of Car class (line 62..64)
+        //Using actually existing instances of TutorialCourseOOP.Car class (line 62..64)
         mercedes.go();
         mercedes.stop();
 
@@ -115,6 +119,11 @@ public class Main {
         //Abstract methods are declared without implementation
 
         //Access modifiers - reduce the possibilities of developer to use certain fragments of code
+
+        //Encapsulation - attributes of a class will be hidden or private and can be accessed only through special
+        //methods - setters and getters. Always make attributes private if you don't want to make them public/protected
+
+
 
 
     }

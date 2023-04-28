@@ -1,7 +1,6 @@
-package package2;
-import package1.*;
+package AccessModifiersPackage2;
 
- public class C {
+public class C {
     String defaultMessage = "This is the default";
     public String publicMessage = "This is the public message";
 

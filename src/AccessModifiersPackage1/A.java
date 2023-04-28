@@ -1,5 +1,5 @@
-package package1;
-import package2.*;
+package AccessModifiersPackage1;
+import AccessModifiersPackage2.*;
 
 public class A {
 

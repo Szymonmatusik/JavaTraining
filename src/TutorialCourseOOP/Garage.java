@@ -1,4 +1,4 @@
-//This class is made to learn how to pass objects as parameters
+package TutorialCourseOOP;//This class is made to learn how to pass objects as parameters
 import java.util.List;
 
 public class Garage {
@@ -9,12 +9,12 @@ public class Garage {
     public static final List<String> sideList = List.of("south", "west", "east", "north");
 
 
-    Garage(String side, int floor, int place){
+    public Garage(String side, int floor, int place){
         if (!sideList.contains(side)
                 || !(MINIMUM_FLOOR <= floor && floor <= MAXIMUM_FLOOR )
                 || !(MINIMUM_PLACE <= place && place <= MAXIMUM_PLACE )){
 
-            System.out.println("Garage has incorrect side, floor or place parameter!");
+            System.out.println("TutorialCourseOOP.Garage has incorrect side, floor or place parameter!");
             this.isGarageCorrect = false;
         }
         else {

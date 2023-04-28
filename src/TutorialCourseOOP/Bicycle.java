@@ -1,10 +1,12 @@
+package TutorialCourseOOP;
+
 //New class created to learn inheritance in Java
-public class Bicycle extends Vehicle{
+public class Bicycle extends Vehicle {
 
     String gender, model;
     int size;
 
-    Bicycle(String gender, String model, int size){
+    public Bicycle(String gender, String model, int size){
         this.gender = gender;
         this.model = model;
         this.size = size;
@@ -14,12 +16,12 @@ public class Bicycle extends Vehicle{
     }
 
     @Override
-    void go() {
+    public void go() {
         System.out.println("The cyclist is riding.");
     }
 
     @Override
-    void stop() {
+    public void stop() {
         System.out.println("The cyclist is stopping.");
     }
 }

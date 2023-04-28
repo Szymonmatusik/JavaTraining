@@ -1,11 +1,11 @@
-//This class allows to exercise super keyword also used in Vehicle-Car Part
+package TutorialCourseOOP;//This class allows to exercise super keyword also used in TutorialCourseOOP.Vehicle-TutorialCourseOOP.Car Part
 
 public class Person {
 
     String name;
     int age;
 
-    Person(String name, int age){
+    public Person(String name, int age){
         this.name = name;
         this.age = age;
 
