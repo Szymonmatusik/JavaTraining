@@ -8,7 +8,7 @@ public class Pizza {
     String bread, topping, sauce, cheese;
     ArrayList<String> ingredientsList = new ArrayList<>();
 
-    public Pizza(String bread, String sauce){
+    Pizza(String bread, String sauce){
         this.bread = bread;
         this.sauce = sauce;
 
@@ -20,7 +20,7 @@ public class Pizza {
         listIngredients();
     }
 
-    public Pizza(String bread, String sauce, String topping){
+    Pizza(String bread, String sauce, String topping){
         this.bread = bread;
         this.sauce = sauce;
         this.topping = topping;
@@ -34,7 +34,7 @@ public class Pizza {
         listIngredients();
     }
 
-    public Pizza(String bread, String sauce, String cheese, String topping){
+    Pizza(String bread, String sauce, String cheese, String topping){
         this.bread = bread;
         this.sauce = sauce;
         this.cheese = cheese;
@@ -50,7 +50,7 @@ public class Pizza {
         listIngredients();
     }
 
-    public void listIngredients(){
+    void listIngredients(){
         System.out.println("This are the ingredients of your pizza: ");
 
         for(int i=1; i<=this.ingredientsList.size(); i++){

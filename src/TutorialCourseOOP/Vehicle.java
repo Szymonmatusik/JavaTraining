@@ -4,6 +4,6 @@ package TutorialCourseOOP;
 public abstract class Vehicle {
 
     String vehicleType;
-    public abstract void go();
-    public abstract void stop();
+    abstract void go();
+    abstract void stop();
 }

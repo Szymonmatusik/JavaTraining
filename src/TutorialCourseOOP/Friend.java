@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Friend {
 
-    public static int numberOfFriends = 0;
-    public static ArrayList<Friend> friendsList = new ArrayList<>();
+    static int numberOfFriends = 0;
+    static ArrayList<Friend> friendsList = new ArrayList<>();
     String name, nick;
     int age;
 
-    public Friend(String name, int age){
+    Friend(String name, int age){
         this.name = name;
         this.age = age;
         //Create nick
@@ -23,13 +23,13 @@ public class Friend {
                             + " and you are " + age + " years old. Nick proposal: " + nick);
     }
 
-    public static String createNick(Friend friend){
+    static String createNick(Friend friend){
         String nick = friend.name.substring(0,3) + friend.age;
 
         return nick;
     }
 
-    public static void displayFriends(){
+    static void displayFriends(){
         for(int i=0; i<numberOfFriends; i++){
             System.out.println("TutorialCourseOOP.Friend number: " + (i+1));
             System.out.println("Name: " + friendsList.get(i).name);

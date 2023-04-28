@@ -18,7 +18,7 @@ public class Car extends Vehicle {
         super.vehicleType = "car";
     }
 
-    public void parkCar(){
+    void parkCar(){
         if (this.garage.isGarageCorrect){
             System.out.println(this);
         }
@@ -35,12 +35,12 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public void go(){
+    void go(){
         System.out.println("The driver is driving the car.");
     }
 
     @Override
-    public void stop(){
+    void stop(){
         System.out.println("The driving is stopping a car.");
     }
 }

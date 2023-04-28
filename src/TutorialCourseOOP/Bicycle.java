@@ -6,7 +6,7 @@ public class Bicycle extends Vehicle {
     String gender, model;
     int size;
 
-    public Bicycle(String gender, String model, int size){
+    Bicycle(String gender, String model, int size){
         this.gender = gender;
         this.model = model;
         this.size = size;
@@ -16,12 +16,12 @@ public class Bicycle extends Vehicle {
     }
 
     @Override
-    public void go() {
+    void go() {
         System.out.println("The cyclist is riding.");
     }
 
     @Override
-    public void stop() {
+    void stop() {
         System.out.println("The cyclist is stopping.");
     }
 }
