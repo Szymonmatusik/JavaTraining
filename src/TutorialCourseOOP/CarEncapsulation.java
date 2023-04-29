@@ -12,6 +12,9 @@ public class CarEncapsulation {
         setYear(year);
 
     }
+    CarEncapsulation(CarEncapsulation car){
+        this.copy(car);
+    }
 
     //getter function for make
     public String getMake(){
@@ -37,5 +40,18 @@ public class CarEncapsulation {
     //Setter for the year attribute
     public void setYear(int year){
         this.year = year;
+    }
+
+    //method to made to copy objects using encapsulation
+    private void copy(CarEncapsulation car){
+        /* Very simple implementation
+        this.make = car.make;
+        this.model = car.model;
+        this.year = car.year;
+         */
+
+        this.setMake(car.getMake());
+        this.setModel(car.getModel());
+        this.setYear(car.getYear());
     }
 }

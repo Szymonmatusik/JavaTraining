@@ -4,7 +4,7 @@ package TutorialCourseOOP;
 import java.util.ArrayList;
 
 public class OOPMainProgram {
-    public static void main() {
+    public static void main(String[] args) {
             //TutorialCourseOOP.Car car = new TutorialCourseOOP.Car("Ford", "Mustang", "red", 2022,);
 
             //Creating the array of objects of type TutorialCourseOOP.Food
@@ -111,6 +111,34 @@ public class OOPMainProgram {
 
             System.out.println(carEncapsulation.getMake() + " " + carEncapsulation.getModel() + " is "
                                 + carEncapsulation.getYear() + " year." );
+
+            //Copying objects
+            CarEncapsulation car1 = new CarEncapsulation("Ford", "Mustang", 2022);
+            //CarEncapsulation car2 = new CarEncapsulation("Ford", "Mustang", 2022);
+
+            //Overriding constructor to copy object
+            CarEncapsulation car2 = new CarEncapsulation(car1);
+
+            System.out.println();
+            System.out.println(car1);
+            System.out.println(car2);
+            System.out.println();
+            System.out.println(car1.getMake());
+            System.out.println(car1.getModel());
+            System.out.println(car1.getYear());
+            System.out.println();
+            System.out.println(car2.getMake());
+            System.out.println(car2.getModel());
+            System.out.println(car2.getYear());
+
+            //Copy values from car1 to car2
+            //car2.copy(car1);
+            System.out.println();
+            System.out.println(car2.getMake());
+            System.out.println(car2.getModel());
+            System.out.println(car2.getYear());
+
+
 
     }
 }
