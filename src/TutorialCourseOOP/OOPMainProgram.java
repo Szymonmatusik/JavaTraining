@@ -1,7 +1,10 @@
 package TutorialCourseOOP;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class OOPMainProgram {
     public static void main(String[] args) {
@@ -151,6 +154,61 @@ public class OOPMainProgram {
             fish.flee();
             fish.hunt();
 
+            //polymorphism - the ability of the object to identify as more than one type. If class extends other class
+            //it automatically becomes the type of that other class like below.
+            Car car = new Car("Mercedes", "CLS", "red", 2023, garageWest);
+            Bicycle bicycle = new Bicycle("Male", "Mountain",23);
+            Boat boat  = new Boat("blue", 4);
+
+            List<Vehicle> vehiclesList = List.of(car, bicycle, boat); //polymorphism
+
+            for (Vehicle vehicle : vehiclesList){
+                    System.out.println(vehicle.vehicleType);
+                    vehicle.go();
+                    vehicle.stop();
+                    System.out.println();
+            }
+
+            //Dynamic Polymorphism (polymorphism = many shapes/forms, dynamic = after compilation (during runtimes)
+            //ex. a corvette is a: corvette, car, vehicle, object
+
+            Animal animalUnknown;
+
+            Scanner scanner = new Scanner(System.in);
+            int animalType;
+
+
+            while (true){
+                    System.out.print("What type of animal would you like the animal to be " +
+                                        "(1=dog, 2=cat, 3=fish, 4=rabbit, 5=hawk): ");
+                    animalType = scanner.nextInt();
+
+
+                    if (animalType == 1){
+                            animalUnknown = new Dog();
+                            break;
+                    }
+                    else if (animalType == 2){
+                            animalUnknown = new Cat();
+                            break;
+                    }
+                    else if (animalType == 3){
+                            animalUnknown = new Fish();
+                            break;
+                    }
+                    else if (animalType == 4){
+                            animalUnknown = new Rabbit();
+                            break;
+                    }
+                    else if (animalType == 5){
+                            animalUnknown = new Hawk();
+                            break;
+                    }
+                    else{
+                            System.out.println("Animal type not correct. Try again!");
+                    }
+            }
+            animalUnknown.speak();
 
     }
 }
