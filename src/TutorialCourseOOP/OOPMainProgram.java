@@ -138,6 +138,18 @@ public class OOPMainProgram {
             System.out.println(car2.getModel());
             System.out.println(car2.getYear());
 
+            //Interface - a template that can be applied to a class. It is similar to inheritance but specifies
+            //what class has to/must do. Classes can apply more than one interface, inheritance is limited to 1 super.
+
+            Rabbit rabbit = new Rabbit();
+            rabbit.flee();
+
+            Hawk hawk = new Hawk();
+            hawk.hunt();
+
+            Fish fish = new Fish();
+            fish.flee();
+            fish.hunt();
 
 
     }
