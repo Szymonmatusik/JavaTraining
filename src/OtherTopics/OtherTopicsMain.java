@@ -1,8 +1,9 @@
 package OtherTopics;
 
+import javax.sound.sampled.*;
 import java.io.*;
-import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class OtherTopicsMain {
 
@@ -97,6 +98,29 @@ public class OtherTopicsMain {
         catch (IOException e) {
             System.out.println("No such file!");
         }
+
+        //Audio in Java
+        File fileAudio = new File("C:\\Users\\Szymon\\Desktop\\JAVA\\BroCode\\src\\OtherTopics\\example.wav");
+        try {
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(fileAudio);
+            try {
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInputStream);
+
+                clip.start();
+
+                String response = scanner.next();
+
+            } catch (LineUnavailableException e) {
+                throw new RuntimeException(e);
+            }
+        } catch (UnsupportedAudioFileException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 }
 
