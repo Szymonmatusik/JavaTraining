@@ -1,0 +1,4 @@
+Hello, I'm testing file writing!
+Adding a new line
+Trying something new
+Trying to append some new stuff
