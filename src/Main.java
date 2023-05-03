@@ -1,3 +1,4 @@
+import GUI.GUIMain;
 import TutorialCourseBasics.TutorialMainProgram;
 import TutorialCourseOOP.OOPMainProgram;
 import OtherTopics.OtherTopicsMain;
@@ -8,6 +9,8 @@ public class Main {
         TutorialMainProgram.main();
         OOPMainProgram.main(null);
         OtherTopicsMain.main(null);
+        GUIMain.main(null);
+
 
     }
 }
