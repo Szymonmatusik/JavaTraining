@@ -1,5 +1,7 @@
 package GUI;
 
+import AccessModifiersPackage2.B;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -29,6 +31,8 @@ public class GUIMain {
 
          */
         new MyFrame();
-
+        new BrdLayout();
+        new FlwLayout();
+        new GrdLayout();
     }
 }

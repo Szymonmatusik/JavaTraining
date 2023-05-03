@@ -94,7 +94,7 @@ public class MyFrame extends JFrame {
 
 
         this.setTitle("This is my first GUI window"); //add title to the frame window
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exits the application
+        this.setDefaultCloseOperation(new JFrame().EXIT_ON_CLOSE); //exits the application
         this.setResizable(true); //abandon to resize the application
         this.setIconImage(frameIcon.getImage()); //change icon of the frame
         this.setSize(750, 750);
