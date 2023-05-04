@@ -85,14 +85,6 @@ public class MyFrame extends JFrame {
             label.setVisible(false);
         });
 
-
-
-
-
-
-
-
-
         this.setTitle("This is my first GUI window"); //add title to the frame window
         this.setDefaultCloseOperation(new JFrame().EXIT_ON_CLOSE); //exits the application
         this.setResizable(true); //abandon to resize the application

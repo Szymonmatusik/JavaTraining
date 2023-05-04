@@ -34,5 +34,6 @@ public class GUIMain {
         new BrdLayout();
         new FlwLayout();
         new GrdLayout();
+        new JLayeredPaneTest();
     }
 }
