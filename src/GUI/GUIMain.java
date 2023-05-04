@@ -13,12 +13,16 @@ public class GUIMain {
     public static void main(String[] args) {
         //JLabel = a GUI display area for a string of text, image or both
 
-        new MyFrame();
+        /*new MyFrame();
         new BrdLayout();
         new FlwLayout();
         new GrdLayout();
         new JLayeredPaneTest();
         new LaunchPage();
         new JOptionPaneTest();
+        new TextFieldTest();
+         */
+        new JCheckBoxTest();
+
     }
 }
