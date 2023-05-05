@@ -23,8 +23,9 @@ public class GUIMain {
         new TextFieldTest();
         new JCheckBoxTest();
         new ExampleFrame();
-         */
         new JComboBoxTest();
+         */
+        new SliderTest();
 
 
 
