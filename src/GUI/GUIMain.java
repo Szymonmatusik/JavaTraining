@@ -21,8 +21,12 @@ public class GUIMain {
         new LaunchPage();
         new JOptionPaneTest();
         new TextFieldTest();
-         */
         new JCheckBoxTest();
+        new ExampleFrame();
+         */
+        new JComboBoxTest();
+
+
 
     }
 }
