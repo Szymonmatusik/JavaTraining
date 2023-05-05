@@ -24,10 +24,8 @@ public class GUIMain {
         new JCheckBoxTest();
         new ExampleFrame();
         new JComboBoxTest();
-         */
         new SliderTest();
-
-
-
+         */
+        new ProgressBarTest();
     }
 }
