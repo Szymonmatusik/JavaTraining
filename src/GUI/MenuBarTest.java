@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class MenuBarTest extends JFrame {
 
@@ -15,11 +18,15 @@ public class MenuBarTest extends JFrame {
     JMenuItem saveItem = new JMenuItem("Save..");
     JMenuItem saveAsItem = new JMenuItem("Save as..");
     JMenuItem settingsItem = new JMenuItem("Settings");
+    JMenuItem openItem = new JMenuItem("Open");
     JMenuItem resizeItem = new JMenuItem("Resize");
     JMenuItem fullScreenItem = new JMenuItem("Full Screen");
     JMenuItem minimizeItem = new JMenuItem("Minimize");
     JMenuItem helpItem = new JMenuItem("Help");
     JMenuItem aboutItem = new JMenuItem("About");
+
+    JFileChooser fileChooser = new JFileChooser();
+    File file;
 
 
 
@@ -46,18 +53,46 @@ public class MenuBarTest extends JFrame {
         saveAsItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK+ InputEvent.SHIFT_DOWN_MASK));
         saveAsItem.getAccessibleContext().setAccessibleDescription("This should save as new file");
         saveAsItem.addActionListener(e -> {
-            System.out.println("Saved as");
-        });
+                    if(fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+                        try {
+                            FileWriter fileWriter = new FileWriter(fileChooser.getSelectedFile());
+                            fileWriter.write("This is my test.");
+                            fileWriter.flush();
+                        }
+                        catch (IOException ex) {
+                            JOptionPane.showMessageDialog(this, "Saving not successful");
+                        }
+                    }
+                });
         fileMenu.add(saveAsItem);
 
 
         //---------------Settings button parameters-------------
-        settingsItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.CTRL_MASK+ InputEvent.SHIFT_DOWN_MASK));
+        settingsItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_DOWN_MASK + InputEvent.SHIFT_DOWN_MASK));
         settingsItem.getAccessibleContext().setAccessibleDescription("This should open settings window");
         settingsItem.addActionListener(e -> {
             System.out.println("Settings Opened");
         });
         fileMenu.add(settingsItem);
+
+
+        fileMenu.addSeparator();
+
+        //---------------OpenItem button parameters-------------
+        openItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_DOWN_MASK));
+        openItem.getAccessibleContext().setAccessibleDescription("This should open settings window");
+        openItem.addActionListener(e -> {
+            int returnValue = fileChooser.showOpenDialog(this);
+
+            if(returnValue == JFileChooser.APPROVE_OPTION){
+                file = fileChooser.getSelectedFile();
+                System.out.println("Opening " + file.getName());
+            }
+            else{
+                System.out.println("Opening was not successful.");
+            }
+        });
+        fileMenu.add(openItem);
 
 
         /* Second tab of the menu bar */
