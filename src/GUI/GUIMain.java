@@ -26,8 +26,9 @@ public class GUIMain {
         new JComboBoxTest();
         new SliderTest();
         new ProgressBarTest();
-         */
         new MenuBarTest();
+         */
+        new JColorChooserTest();
 
     }
 }
