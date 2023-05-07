@@ -27,8 +27,11 @@ public class GUIMain {
         new SliderTest();
         new ProgressBarTest();
         new MenuBarTest();
-         */
         new JColorChooserTest();
+        new KeyListenerDemo();
+         */
+        new MouseListenerDemo();
+
 
     }
 }
